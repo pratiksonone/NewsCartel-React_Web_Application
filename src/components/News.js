@@ -16,8 +16,6 @@ export default function News(props) {
     useEffect(() => {
         const updateNews = async () => {
             props.setProgress(10);
-            // let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page}&pageSize=${props.pageSize}`;
-            // let url = `http://api.mediastack.com/v1/news?access_key=${props.apiKey}&countries=${props.country}& category= ${props.category}&page=${page}&pageSize=${props.pageSize}`;
             let url = `https://api.currentsapi.services/v1/latest-news?country=${props.country}&language=en&page_number=${page}&page-size=${props.pageSize}&apiKey=8h66ZPOe0e9pl3tdsguYVhnDm4UnTqmE-Ym5PUk0nPQFDRSp&category=${props.category}`;
             setLoading(true)
             props.setProgress(30);
@@ -39,8 +37,6 @@ export default function News(props) {
     }, []);
 
     const fetchMoreData = async () => {
-        // let url = `https://newsapi.org/v2/top-headlines?country=${props.country}&category=${props.category}&apiKey=${props.apiKey}&page=${page + 1}&pageSize=${props.pageSize}`;
-        // let url = `http://api.mediastack.com/v1/news?access_key=${props.apiKey}&countries=${props.country}& category= ${props.category}&page=${page + 1}&pageSize=${props.pageSize}`;
         let url = `https://api.currentsapi.services/v1/latest-news?country=${props.country}&language=en&page_number=${page + 1}&page-size=${props.pageSize}&apiKey=8h66ZPOe0e9pl3tdsguYVhnDm4UnTqmE-Ym5PUk0nPQFDRSp&category=${props.category}`;
         setPage(page + 1)
         let data = await fetch(url);
@@ -77,13 +73,6 @@ export default function News(props) {
                 <section className="text-gray-600 body-font">
                     <div className="container px-4 py-3 md:px-5 md:py-4 md:mx-auto mx-auto">
                         <div className="flex flex-col mx-9">
-                            {/* {articles.map((element) => {
-                                return <div className="p-4" key={element.url}>
-                                    <Newsitem title={element.title} urlToImage={element.urlToImage} description={element.description} author={element.author} date={element.publishedAt} url={element.url} />
-
-                                </div>
-
-                            })} */}
 
                             {articles.map((element) => {
                                 return <div className="p-4" key={element.url}>
