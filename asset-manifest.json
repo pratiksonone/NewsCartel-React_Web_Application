@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/NewsCartel-React_Web_Application/static/css/main.8b061ddb.css",
+    "main.js": "/NewsCartel-React_Web_Application/static/js/main.2057722e.js",
+    "static/media/weatherBG.jpg": "/NewsCartel-React_Web_Application/static/media/weatherBG.fe6cd0d8bcd5c44cd7c0.jpg",
+    "static/media/weather.png": "/NewsCartel-React_Web_Application/static/media/weather.3654037565f73a14f6ee.png",
+    "static/media/ImageNotAvailable.png": "/NewsCartel-React_Web_Application/static/media/ImageNotAvailable.bd444999fd8546f854fb.png",
+    "index.html": "/NewsCartel-React_Web_Application/index.html",
+    "main.8b061ddb.css.map": "/NewsCartel-React_Web_Application/static/css/main.8b061ddb.css.map",
+    "main.2057722e.js.map": "/NewsCartel-React_Web_Application/static/js/main.2057722e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b061ddb.css",
+    "static/js/main.2057722e.js"
+  ]
+}
