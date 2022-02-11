@@ -19,13 +19,14 @@ export default function Weather(props) {
 
     useEffect(() => {
         const fetchWeather = async () => {
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=b12e1bdef4f0a278f9f418ae4f1c778c`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=${props.apiId}`;
             let data = await fetch(url);
             let parsedData = await data.json();
             setCity(parsedData.main, parsedData.weather);
 
         }
         fetchWeather();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [search])
 
     const capitalizeFirstLetter = (string) => {
@@ -34,13 +35,13 @@ export default function Weather(props) {
     return (
         <>
 
-            <div className=' px-10 py-20 pb-full sm:px-32 md:px-50 lg:px-80 lg:py-30 m-0 bg-gradient-to-tr from-cyan-200 to-blue-600' >
-                <div className=" rounded-3xl py-1 lg:px-1 lg:py-1 lg:flex my-20 bg-slate-300 shadow-2xl shadow-black" style={myStyle}>
+            <div className=' px-10 py-20 pb-full sm:px-32 md:px-50 lg:px-80 lg:py-30 m-0 bg-gradient-to-tr from-blue-300  to-blue-600' >
+                <div className=" rounded-3xl py-1 lg:px-1 lg:py-1 lg:flex my-20 bg-slate-300 shadow-lg shadow-black" style={myStyle}>
 
                     <div className=" p-3  mx-auto flex items-center justify-center">
 
                         <div className="flex flex-col items-center justify-center">
-                            <input type="search" value={search} placeholder='City' className='rounded-2xl p-2 px-3 outline-none font-bold bg-gradient-to-tr from-cyan-200 to-blue-600 border-2 border-black hover:border-slate-800 text-blue-800 placeholder-slate-900' onChange={(event) => { setSearch(event.target.value) }} />
+                            <input type="search" value={search} placeholder='City' className='rounded-2xl p-2 px-3 outline-none font-bold bg-gradient-to-tr from-cyan-600 to-blue-200 border-2 border-black hover:border-slate-800 text-slate-800 placeholder-slate-900' onChange={(event) => { setSearch(event.target.value) }} />
                             {!search ? (
                                 <p className='font-serif font-bold my-28 text-2xl text-center '>Enter Your City Name To Get The Weather</p>
                             ) : (

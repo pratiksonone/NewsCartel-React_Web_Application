@@ -9,33 +9,33 @@ export default function Navbar() {
             <nav className="lg:flex sticky top-0 z-20 items-center bg-slate-900 text-white md:-p-3">
 
                 <div className="md:ml-2 md:mr-10 lg:mr-20 p-3 flex items-center justify-between">
-                    <div className='mr-20'>
-                        <Link to="/">NewsCartel</Link>
+                    <div className='md:mr-20'>
+                        <Link to="/NewsCartel-React_Web_Application"><p className='font-bold text-xl'>NewsCartel</p></Link>
                     </div>
 
                     <div >
                         <ul className={(showNav ? "right-1" : "-right-full") + " lg:static fixed bottom-0 top-[67px] lg:flex lg:space-x-7 items-center lg:bg-transparent bg-slate-800 bg-opacity-90  w-1/3 text-white lg:space-y-0 space-y-5 p-2 transition-right rounded-md"}>
 
                             <li className="m-3">
-                                <Link className="hover:text-slate-400 outline-none" to="/">General</Link>
+                                <Link className="hover:text-slate-400 outline-none text-lg" to="/NewsCartel-React_Web_Application">General</Link>
                             </li>
                             <li className="m-3">
-                                <Link className="hover:text-slate-400" to="/business">Business</Link>
+                                <Link className="hover:text-slate-400 text-lg" to="/NewsCartel-React_Web_Application/business">Business</Link>
                             </li>
                             <li className="m-3">
-                                <Link className="hover:text-slate-400" to="/entertainment">Entertainment</Link>
+                                <Link className="hover:text-slate-400 text-lg" to="/NewsCartel-React_Web_Application/entertainment">Entertainment</Link>
                             </li>
                             <li className="m-3">
-                                <Link className="hover:text-slate-400" to="/sports">Sports</Link>
+                                <Link className="hover:text-slate-400 text-lg" to="/NewsCartel-React_Web_Application/sports">Sports</Link>
                             </li>
                             <li className="m-3">
-                                <Link className="hover:text-slate-400" to="/science">Science</Link>
+                                <Link className="hover:text-slate-400 text-lg" to="/NewsCartel-React_Web_Application/science">Science</Link>
                             </li>
                             <li className="m-3">
-                                <Link className="hover:text-slate-400" to="/technology">Technology</Link>
+                                <Link className="hover:text-slate-400 text-lg" to="/NewsCartel-React_Web_Application/technology">Technology</Link>
                             </li>
                             <li className="m-3">
-                                <Link className="hover:text-slate-400" to="/health">Health</Link>
+                                <Link className="hover:text-slate-400 text-lg" to="/NewsCartel-React_Web_Application/health">Health</Link>
                             </li>
 
                         </ul>
@@ -43,7 +43,7 @@ export default function Navbar() {
                     <div>
                         <ul className='mx-2 '>
                             <li className='p-1 px-3  flex items-center justify-center'>
-                                <WiDayCloudyWindy className=' w-8 h-8 mx-2' /> <Link className="border-2 px-2 border-white hover:text-blue-400 hover:border-blue-400 focus::border-blue-400" to="/weather"> Weather</Link>
+                                <WiDayCloudyWindy className=' w-8 h-8 mx-2' /> <Link className="border-2 px-2 border-white hover:text-blue-400 hover:border-blue-400 focus::border-blue-400" to="/NewsCartel-React_Web_Application/weather"> Weather</Link>
                             </li>
                         </ul>
                     </div>

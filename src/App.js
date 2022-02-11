@@ -11,6 +11,7 @@ function App() {
 
   const pageSize = 10;
   const apiKey = process.env.REACT_APP_API_KEY;
+  const weatherApiKey = process.env.REACT_APP_WEATHER_API_KEY;
   return (
     <>
       <div className="">
@@ -25,13 +26,13 @@ function App() {
 
           <Routes>
             <Route exact path="/NewsCartel-React_Web_Application" element={<News setProgress={setProgress} key="general" pageSize={pageSize} country="in" category="general" apiKey={apiKey} />}></Route>
-            <Route exact path="/business" element={<News setProgress={setProgress} key="business" pageSize={pageSize} country="in" category="business" apiKey={apiKey} />}></Route>
-            <Route exact path="/entertainment" element={<News setProgress={setProgress} key="entertainment" pageSize={pageSize} country="in" category="entertainment" apiKey={apiKey} />}></Route>
-            <Route exact path="/health" element={<News setProgress={setProgress} key="health" pageSize={pageSize} country="in" category="health" apiKey={apiKey} />}></Route>
-            <Route exact path="/science" element={<News setProgress={setProgress} key="science" pageSize={pageSize} country="in" category="science" apiKey={apiKey} />}></Route>
-            <Route exact path="/sports" element={<News setProgress={setProgress} key="sports" pageSize={pageSize} country="in" category="sports" apiKey={apiKey} />}></Route>
-            <Route exact path="/technology" element={<News setProgress={setProgress} key="technology" pageSize={pageSize} country="in" category="technology" apiKey={apiKey} />}></Route>
-            <Route exact path="/weather" element={<Weather />}></Route>
+            <Route exact path="/NewsCartel-React_Web_Application/business" element={<News setProgress={setProgress} key="business" pageSize={pageSize} country="in" category="business" apiKey={apiKey} />}></Route>
+            <Route exact path="/NewsCartel-React_Web_Application/entertainment" element={<News setProgress={setProgress} key="entertainment" pageSize={pageSize} country="in" category="entertainment" apiKey={apiKey} />}></Route>
+            <Route exact path="/NewsCartel-React_Web_Application/health" element={<News setProgress={setProgress} key="health" pageSize={pageSize} country="in" category="health" apiKey={apiKey} />}></Route>
+            <Route exact path="/NewsCartel-React_Web_Application/science" element={<News setProgress={setProgress} key="science" pageSize={pageSize} country="in" category="science" apiKey={apiKey} />}></Route>
+            <Route exact path="/NewsCartel-React_Web_Application/sports" element={<News setProgress={setProgress} key="sports" pageSize={pageSize} country="in" category="sports" apiKey={apiKey} />}></Route>
+            <Route exact path="/NewsCartel-React_Web_Application/technology" element={<News setProgress={setProgress} key="technology" pageSize={pageSize} country="in" category="technology" apiKey={apiKey} />}></Route>
+            <Route exact path="/NewsCartel-React_Web_Application/weather" element={<Weather apiId={weatherApiKey} />}></Route>
           </Routes>
           <Footer />
         </Router>
